@@ -38,3 +38,8 @@ This endpoint will take start and end time as Query Parameters.
 ```sh
 python3 server.py
 ```
+
+## Run unit test
+```sh
+pytest -v
+```
