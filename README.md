@@ -4,7 +4,7 @@ Client-server script in Python that handles MQTT messages via RabbitMQ
 
 ## Requirements
 
-- MongoDB: [Installation Guide] (https://www.mongodb.com/docs/manual/installation/)
+- MongoDB: [Installation Guide](https://www.mongodb.com/docs/manual/installation/)
 - RabbitMQ: [Installation Guide](https://www.rabbitmq.com/docs/download)
 - Python 3.12.1
 - Poetry: [Installation Guide](https://python-poetry.org/docs/#installation)
