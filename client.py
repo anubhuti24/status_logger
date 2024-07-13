@@ -1,5 +1,4 @@
 import json
-import logging
 import time
 import random
 from datetime import datetime
@@ -19,7 +18,6 @@ def main():
     while True:
         try:
             status = random.randint(0, 6)
-            logging.info(status)
             message = json.dumps(
                 {"status": status, "created_at": datetime.now().isoformat()}
             )
@@ -27,7 +25,6 @@ def main():
             publish.single(PUBLISH_TOPIC, message, hostname="localhost")
 
         except KeyboardInterrupt:
-            logging.info("Press Ctrl+C to interrupt")
             mqttc.disconnect()
             mqttc.loop_stop()
 
@@ -35,10 +32,4 @@ def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        filename="./log/receiver.log",
-        filemode="w",
-        level=logging.DEBUG,
-    )
-
     main()

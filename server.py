@@ -55,9 +55,9 @@ app = FastAPI(title="Status Logger", lifespan=lifespan)
 
 @app.get("/status")
 async def count_status(
-        start_time: Optional[datetime] = Query(description="Start time in ISO format"),
-        end_time: Optional[datetime] = Query(description="End time in ISO format"),
-        collection: Collection = Depends(get_collection)
+    start_time: Optional[datetime] = Query(description="Start time in ISO format"),
+    end_time: Optional[datetime] = Query(description="End time in ISO format"),
+    collection: Collection = Depends(get_collection),
 ):
     pipeline = collection.aggregate(
         [
