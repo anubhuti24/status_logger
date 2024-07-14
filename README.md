@@ -22,6 +22,7 @@ Start the RabbitMQ server in the background.
 ```sh
 sudo systemctl start rabbitmq-server
 ```
+Custom constant values can be defined in the constants.py file.
 
 ## Publish messages 
 Run client.py file which will emit MQTT messages via RabbitMQ.
@@ -39,7 +40,7 @@ This endpoint will take start and end time as Query Parameters.
 python3 server.py
 ```
 
-## Run unit test
+## Run unit and integration tests
 ```sh
 pytest -v
 ```
