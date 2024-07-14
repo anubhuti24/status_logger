@@ -24,9 +24,9 @@ def connect_to_db():
     # Insert test data
     now = datetime.now()
     test_data = [
-        {"status": 0, "created_at": now - timedelta(hours=2)},
-        {"status": 1, "created_at": now - timedelta(hours=1)},
-        {"status": 1, "created_at": now - timedelta(minutes=30)},
+        {"status": 0, "created_at": now - timedelta(minutes=1)},
+        {"status": 1, "created_at": now - timedelta(minutes=2)},
+        {"status": 1, "created_at": now - timedelta(minutes=3)},
         {"status": 2, "created_at": now},
     ]
     collection.insert_many(test_data)

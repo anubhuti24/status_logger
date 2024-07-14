@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 def test_status_integration(test_client, connect_to_db):
     end_time = datetime.now()
-    start_time = end_time - timedelta(hours=3)
+    start_time = end_time - timedelta(minutes=4)
 
     response = test_client.get(
         f"/status?start_time={start_time.isoformat()}&end_time={end_time.isoformat()}"
